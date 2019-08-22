@@ -24,11 +24,16 @@
 }
 
 .main-container ul li footer {
-    flex: 1;
     background: #fff;
     border: 1px solid #eee;
     padding: 15px 20px;
     text-align: left;
+    border-radius: 5px 5px 0 0;
+}
+
+.main-container ul li .footer {
+    border-radius: 0 0 5px 5px;
+    flex: 1;
 }
 
 .main-container ul li footer strong {
@@ -37,29 +42,46 @@
 }
 
 .main-container ul li footer p {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 20px;
-    color: #999;
     margin-top: 5px;
 }
 
-.main-container ul li .buttons {
+.main-container ul li footer .actions button{
+    background: transparent;
+    border:0;
+    cursor: pointer;
+}
+
+.main-container ul li footer .actions strong{
+    text-align: justify
+}
+
+.main-container ul li footer p.description{
+    color: #999;
+}
+
+.main-container ul li footer p.value{
+    color: rgb(0, 0, 0);
+}
+
+.main-container ul li footer .buttons {
     margin-top: 10px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
 }
 
-.main-container ul li .buttons button {
+.main-container ul li footer .buttons button {
     height: 50px;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
     border: 0;
     border-radius: 4px;
-    background: #fff;
+    background: hsl(317, 54%, 73%);
     cursor: pointer;
 }
 
-.main-container ul li .buttons button:hover img {
+.main-container ul li footer .buttons button:hover img {
     transform: translate(-5px);
     transition: all 0.2s;
 }
@@ -69,4 +91,12 @@
     color: #999;
     font-weight: bold;
     margin-top: 300px;
+}
+
+.input-filter input{
+    height: 38px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    padding: 0 20px;
+    font-size: 14px;
 }
