@@ -10,7 +10,8 @@ html, body, #root {
 }
 
 body{
-  background: hsl(316, 23%, 38%);
+  background-image: url(assets/woman-earrings-jewelry-makeup.jpg);
+  /*background: hsl(316, 23%, 38%);*/
 }
 
 body, input, button {

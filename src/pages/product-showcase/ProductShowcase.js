@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import like from '../../assets/like.svg';
 import './ProductShowcase.css';
@@ -7,7 +7,7 @@ export default function ProductShowcase() {
 
   const [countLikesUser, setCountLikesUser] = useState(0);
 
-  const [productList, setProductList] = useState([
+  const [productList] = useState([
     { _id: 1, name: "Produto A", description: "Description of product", value: 17.90, imageSrc: "http://lounge.obviousmag.org/trocando_ideias/joias01.jpg", likes: 3 },
     { _id: 2, name: "Produto B", description: "TesteTesteTesteTesteTeste Descption teste a good day using react hooks but idk why is not really doing", value: 30.00, imageSrc: "http://lounge.obviousmag.org/trocando_ideias/joias01.jpg", likes: 1 },
     { _id: 3, name: "Produto C", description: "Description of product", value: 50.50, imageSrc: "http://lounge.obviousmag.org/trocando_ideias/joias01.jpg", likes: 0 },
@@ -16,10 +16,6 @@ export default function ProductShowcase() {
     { _id: 6, name: "Produto F", description: "Description of product", value: 90.70, imageSrc: "http://lounge.obviousmag.org/trocando_ideias/joias01.jpg", likes: 0 },
     { _id: 7, name: "Produto G", description: "Description of product", value: 80.00, imageSrc: "http://lounge.obviousmag.org/trocando_ideias/joias01.jpg", likes: 0 },
   ]);
-
-  useEffect(() => {
-    console.log(productList);
-  }, [countLikesUser]);
 
   function handleAddLike(product) {
 

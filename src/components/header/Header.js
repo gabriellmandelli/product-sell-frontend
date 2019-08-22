@@ -10,7 +10,7 @@ export default function Header() {
         <Link to='/'>
           <h3>Samanta's Store</h3>
         </Link>
-        <Link to='/pedidos'>
+        <Link to='/product-add'>
           <h3>Pedidos</h3>
         </Link>
       </div>
