@@ -21,7 +21,7 @@ export default function ProductShowcase() {
 
     product.likes++;
 
-    var countLikes = countLikesUser + 1;
+    let countLikes = countLikesUser + 1;
 
     setCountLikesUser(countLikes);
   }

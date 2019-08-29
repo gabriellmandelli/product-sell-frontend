@@ -72,10 +72,12 @@ class ProductAdd extends Component {
           onChange={this.handleChange}
           value={this.state.url}
         />
-
+        
         <button type="submit">Cadastrar</button>
-
+        
+        <img src={this.state.url} alt="" />
       </form>
+      
     );
   };
 }

@@ -1,6 +1,6 @@
 header#main-header{
-  background: #fff;
   height: 72px;
+  background: rgba(255, 255, 255, 0.883);
   border-bottom: 1px solid #DDD;
 }
 
@@ -10,7 +10,7 @@ header#main-header .header-content {
   margin: 0 auto;
   height: 72px;
   padding: 0 30px;
-
+  font: 1em -apple-system;
   display: flex;
   align-items: center;
   justify-content: space-between;
