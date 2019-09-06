@@ -52,6 +52,11 @@
     cursor: pointer;
 }
 
+.main-container ul li footer .actions button:hover img {
+    transform: translate(-3px);
+    transition: all 0.2s;
+}
+
 .main-container ul li footer .actions strong{
     text-align: justify
 }
@@ -63,27 +68,6 @@
 .main-container ul li footer p.value{
     color: rgb(0, 0, 0);
     font-size: 16px;
-}
-
-.main-container ul li footer .buttons {
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-}
-
-.main-container ul li footer .buttons button {
-    height: 50px;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
-    border: 0;
-    border-radius: 4px;
-    background: hsl(317, 54%, 73%);
-    cursor: pointer;
-}
-
-.main-container ul li footer .buttons button:hover img {
-    transform: translate(-5px);
-    transition: all 0.2s;
 }
 
 .main-container .empty {

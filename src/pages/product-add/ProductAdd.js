@@ -5,15 +5,16 @@ import './ProductAdd.css';
 class ProductAdd extends Component {
 
   state = {
-    idProduct: null,
+    idProduct: '',
     name: '',
     description: '',
     value: '',
     url: '',
   }
 
-  handleSubimit = async e => {
-    e.preventDefault();
+  handleSubimit = async event => {
+
+    event.preventDefault();
 
     const newProduct = new FormData();
 
@@ -22,12 +23,10 @@ class ProductAdd extends Component {
     newProduct.append('description', this.state.description);
     newProduct.append('value', this.state.value);
     newProduct.append('url', this.state.url);
-
-    console.log(newProduct);
   }
 
-  handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
+  handleChange = fromProduct => {
+    this.setState({ [fromProduct.target.name]: fromProduct.target.value });
   }
 
   render() {
@@ -72,12 +71,12 @@ class ProductAdd extends Component {
           onChange={this.handleChange}
           value={this.state.url}
         />
-        
+
         <button type="submit">Cadastrar</button>
-        
+
         <img src={this.state.url} alt="" />
       </form>
-      
+
     );
   };
 }
