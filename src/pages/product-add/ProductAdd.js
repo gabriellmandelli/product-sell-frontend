@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 
 import './ProductAdd.css';
 
+import connectApi from '../../services/connectApi';
+
 class ProductAdd extends Component {
 
   state = {
-    idProduct: '',
+    idReference: '',
     name: '',
     description: '',
     value: '',
@@ -16,13 +18,17 @@ class ProductAdd extends Component {
 
     event.preventDefault();
 
-    const newProduct = new FormData();
+    const productObject = {
+      idReference: +this.state.idReference,
+      name: this.state.name,
+      description: this.state.description,
+      value: +this.state.value,
+      url: this.state.url
+    }
 
-    newProduct.append('idProduct', this.state.idProduct);
-    newProduct.append('name', this.state.name);
-    newProduct.append('description', this.state.description);
-    newProduct.append('value', this.state.value);
-    newProduct.append('url', this.state.url);
+    await connectApi.post('/product', productObject);
+
+    this.props.history.push('/')
   }
 
   handleChange = fromProduct => {
@@ -34,10 +40,10 @@ class ProductAdd extends Component {
       <form id="add-product" onSubmit={this.handleSubimit}>
         <input
           type="number"
-          name="idProduct"
+          name="idReference"
           placeholder="Código do produto"
           onChange={this.handleChange}
-          value={this.state.idProduct}
+          value={this.state.idReference}
         />
 
         <input
@@ -57,7 +63,7 @@ class ProductAdd extends Component {
         />
 
         <input
-          type="text"
+          type="number"
           name="value"
           placeholder="Valor do produto"
           onChange={this.handleChange}

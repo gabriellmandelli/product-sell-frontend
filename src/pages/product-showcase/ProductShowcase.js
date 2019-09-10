@@ -11,7 +11,7 @@ export default function ProductShowcase() {
   const [clientId] = useState(0);
 
   useEffect(() => {
-    
+
   }, [productList]);
 
   useEffect(() => {
