@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-import './Header.css';
-import mainpage from '../../assets/mainpage.png';
-import pedidos from '../../assets/pedidos.png';
+import './Header.css'
+import mainpage from '../../assets/mainpage.png'
+import pedidos from '../../assets/pedidos.png'
 
 export default function Header() {
   return (
@@ -17,5 +17,5 @@ export default function Header() {
         </Link>
       </div>
     </header>
-  );
+  )
 }

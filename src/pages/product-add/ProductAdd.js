@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-import './ProductAdd.css';
+import './ProductAdd.css'
 
-import connectApi from '../../services/connectApi';
+import connectApi from '../../services/connectApi'
 
 class ProductAdd extends Component {
 
@@ -16,7 +16,7 @@ class ProductAdd extends Component {
 
   handleSubimit = async event => {
 
-    event.preventDefault();
+    event.preventDefault()
 
     const productObject = {
       idReference: +this.state.idReference,
@@ -26,13 +26,13 @@ class ProductAdd extends Component {
       url: this.state.url
     }
 
-    await connectApi.post('/product', productObject);
+    await connectApi.post('/product', productObject)
 
     this.props.history.push('/')
   }
 
   handleChange = fromProduct => {
-    this.setState({ [fromProduct.target.name]: fromProduct.target.value });
+    this.setState({ [fromProduct.target.name]: fromProduct.target.value })
   }
 
   render() {
@@ -83,8 +83,8 @@ class ProductAdd extends Component {
         <img src={this.state.url} alt="" />
       </form>
 
-    );
-  };
+    )
+  }
 }
 
-export default ProductAdd;
+export default ProductAdd

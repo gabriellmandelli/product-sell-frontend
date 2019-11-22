@@ -1,31 +1,31 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 
-import './ProductShowcase.css';
-import like from '../../assets/like.svg';
-import connectApi from "../../services/connectApi";
+import './ProductShowcase.css'
+import like from '../../assets/like.svg'
+import connectApi from "../../services/connectApi"
 
 export default function ProductShowcase() {
 
-  const [countLikesUser, setCountLikesUser] = useState(0);
-  const [productList, setProductList] = useState([]);
-  const [clientId] = useState(0);
+  const [countLikesUser, setCountLikesUser] = useState(0)
+  const [productList, setProductList] = useState([])
+  const [clientId] = useState(0)
 
   useEffect(() => {
 
-  }, [productList]);
+  }, [productList])
 
   useEffect(() => {
     loadProducts()
-  }, [clientId]);
+  }, [clientId])
 
   async function loadProducts() {
     const request = await connectApi.get('/product')
-    setProductList(request.data);
+    setProductList(request.data)
   }
 
   function handleAddLike(product) {
-    product.likes++;
-    setCountLikesUser(countLikesUser + 1);
+    product.likes++
+    setCountLikesUser(countLikesUser + 1)
   }
 
   return (
@@ -55,5 +55,5 @@ export default function ProductShowcase() {
         ))}
       </ul>
     </div>
-  );
+  )
 }
